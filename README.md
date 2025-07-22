@@ -715,7 +715,7 @@ This label is applied to the `authentik_server` container.  Even if you don't us
     labels:
       - "traefik.enable=true"
       ## Individual Application forwardAuth regex (catch any subdomain using individual application forwardAuth)  
-      - "traefik.http.routers.authentik-output-rtr.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.${DOMAINNAME}`) && PathPrefix(`/outpost.goauthentik.io/`)"
+      - "traefik.http.routers.authentik-output-rtr.rule=HostRegexp(`[a-z0-9-]+\.${DOMAINNAME}`) && PathPrefix(`/outpost.goauthentik.io/`)"
 ```
 
 #### Provider Creation (Individual Application) - Manual  
